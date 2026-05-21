@@ -70,7 +70,8 @@ param aiProjectDeploymentsJson string = '''
     "name": "gpt-4o-mini",
     "model": {
       "format": "OpenAI",
-      "name": "gpt-4o-mini"
+      "name": "gpt-4o-mini",
+      "version": "2024-07-18"
     },
     "sku": {
       "name": "Standard",
@@ -81,7 +82,8 @@ param aiProjectDeploymentsJson string = '''
     "name": "gpt-4o",
     "model": {
       "format": "OpenAI",
-      "name": "gpt-4o"
+      "name": "gpt-4o",
+      "version": "2024-11-20"
     },
     "sku": {
       "name": "Standard",
