@@ -63,7 +63,7 @@ def interact_with_agent():
                 # NOTE: the sample uses `conversation=...` (not conversation_id)
                 conversation=conversation.id,
                 extra_body={"agent_reference": {"name": agent_name, "type": "agent_reference"}},
-                input="",  # sample keeps this empty because the message is already in the conversation items
+                model=os.getenv("MODEL_NAME", "gpt-4o"),
             )
 
             print(f"Agent: {response.output_text}")

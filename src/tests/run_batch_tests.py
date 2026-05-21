@@ -105,7 +105,7 @@ def run_batch_tests(experiment_name):
         response = openai_client.responses.create(
             conversation=conversation.id,
             extra_body={"agent_reference": {"name": agent_name, "type": "agent_reference"}},
-            input="",
+            model=os.getenv("MODEL_NAME", "gpt-4o"),
         )
 
         # Extract text from the response; fall back to str(response) if shape changes
