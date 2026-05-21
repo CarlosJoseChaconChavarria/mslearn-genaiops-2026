@@ -74,7 +74,7 @@ param aiProjectDeploymentsJson string = '''
       "version": "2024-07-18"
     },
     "sku": {
-      "name": "GlobalStandard",
+      "name": "Standard",
       "capacity": 10
     }
   },
@@ -86,7 +86,7 @@ param aiProjectDeploymentsJson string = '''
       "version": "2024-11-20"
     },
     "sku": {
-      "name": "GlobalStandard",
+      "name": "Standard",
       "capacity": 10
     }
   }
