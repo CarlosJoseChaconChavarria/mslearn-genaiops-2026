@@ -73,7 +73,7 @@ param aiProjectDeploymentsJson string = '''
       "name": "gpt-4o-mini"
     },
     "sku": {
-      "name": "GlobalStandard",
+      "name": "Standard",
       "capacity": 10
     }
   },
@@ -84,7 +84,7 @@ param aiProjectDeploymentsJson string = '''
       "name": "gpt-4o"
     },
     "sku": {
-      "name": "GlobalStandard",
+      "name": "Standard",
       "capacity": 10
     }
   }
