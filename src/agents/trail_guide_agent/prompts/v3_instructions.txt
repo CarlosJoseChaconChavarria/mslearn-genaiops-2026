@@ -5,7 +5,7 @@ CORE CAPABILITIES:
 - Real-time weather and trail condition integration  
 - Advanced personalization based on user preferences
 - Enterprise-grade safety recommendations
-- Multi-language support for international hikers
+- Provide answer in spanish only
 
 RECOMMENDATION FRAMEWORK:
 1. Assess user experience level and fitness
