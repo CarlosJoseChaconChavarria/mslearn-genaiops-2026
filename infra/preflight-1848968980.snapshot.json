@@ -1,0 +1,312 @@
+{
+  "predictedResources": [
+    {
+      "id": "/subscriptions/1881d0aa-aae7-4809-843e-e27780842e9f/resourceGroups/rg-ai-300",
+      "type": "Microsoft.Resources/resourceGroups",
+      "name": "rg-ai-300",
+      "apiVersion": "2021-04-01",
+      "location": "eastus",
+      "tags": {
+        "azd-env-name": "ai-300"
+      }
+    },
+    {
+      "id": "/subscriptions/1881d0aa-aae7-4809-843e-e27780842e9f/resourceGroups/rg-ai-300/providers/Microsoft.CognitiveServices/accounts/ai-account-jojpxmd7nhutk",
+      "type": "Microsoft.CognitiveServices/accounts",
+      "name": "ai-account-jojpxmd7nhutk",
+      "apiVersion": "2025-06-01",
+      "location": "eastus",
+      "sku": {
+        "name": "S0"
+      },
+      "kind": "AIServices",
+      "identity": {
+        "type": "SystemAssigned"
+      },
+      "properties": {
+        "allowProjectManagement": true,
+        "customSubDomainName": "ai-account-jojpxmd7nhutk",
+        "publicNetworkAccess": "Enabled",
+        "disableLocalAuth": true,
+        "networkAcls": {
+          "defaultAction": "Allow",
+          "virtualNetworkRules": [],
+          "ipRules": []
+        }
+      }
+    },
+    {
+      "id": "/subscriptions/1881d0aa-aae7-4809-843e-e27780842e9f/resourceGroups/rg-ai-300/providers/Microsoft.CognitiveServices/accounts/ai-account-jojpxmd7nhutk/projects/ai-project-ai-300",
+      "type": "Microsoft.CognitiveServices/accounts/projects",
+      "name": "ai-account-jojpxmd7nhutk/ai-project-ai-300",
+      "apiVersion": "2025-06-01",
+      "location": "eastus",
+      "identity": {
+        "type": "SystemAssigned"
+      },
+      "properties": {
+        "description": "ai-project-ai-300 Project",
+        "displayName": "ai-project-ai-300Project"
+      }
+    },
+    {
+      "id": "/subscriptions/1881d0aa-aae7-4809-843e-e27780842e9f/resourceGroups/rg-ai-300/providers/Microsoft.CognitiveServices/accounts/ai-account-jojpxmd7nhutk/capabilityHosts/agents",
+      "type": "Microsoft.CognitiveServices/accounts/capabilityHosts",
+      "name": "ai-account-jojpxmd7nhutk/agents",
+      "apiVersion": "2025-10-01-preview",
+      "properties": {
+        "capabilityHostKind": "Agents",
+        "enablePublicHostingEnvironment": true
+      }
+    },
+    {
+      "id": "/subscriptions/1881d0aa-aae7-4809-843e-e27780842e9f/resourceGroups/rg-ai-300/providers/Microsoft.OperationalInsights/workspaces/logs-jojpxmd7nhutk",
+      "type": "Microsoft.OperationalInsights/workspaces",
+      "name": "logs-jojpxmd7nhutk",
+      "apiVersion": "2021-12-01-preview",
+      "location": "eastus",
+      "tags": {
+        "azd-env-name": "ai-300"
+      },
+      "properties": {
+        "retentionInDays": 30,
+        "features": {
+          "searchVersion": 1
+        },
+        "sku": {
+          "name": "PerGB2018"
+        }
+      }
+    },
+    {
+      "id": "/subscriptions/1881d0aa-aae7-4809-843e-e27780842e9f/resourceGroups/rg-ai-300/providers/Microsoft.Insights/components/appi-jojpxmd7nhutk",
+      "type": "Microsoft.Insights/components",
+      "name": "appi-jojpxmd7nhutk",
+      "apiVersion": "2020-02-02",
+      "location": "eastus",
+      "kind": "web",
+      "tags": {
+        "azd-env-name": "ai-300"
+      },
+      "properties": {
+        "Application_Type": "web",
+        "WorkspaceResourceId": "/subscriptions/1881d0aa-aae7-4809-843e-e27780842e9f/resourceGroups/rg-ai-300/providers/Microsoft.OperationalInsights/workspaces/logs-jojpxmd7nhutk"
+      }
+    },
+    {
+      "id": "/subscriptions/1881d0aa-aae7-4809-843e-e27780842e9f/resourceGroups/rg-ai-300/providers/Microsoft.CognitiveServices/accounts/ai-account-jojpxmd7nhutk/projects/ai-project-ai-300/connections/appi-connection",
+      "type": "Microsoft.CognitiveServices/accounts/projects/connections",
+      "name": "ai-account-jojpxmd7nhutk/ai-project-ai-300/appi-connection",
+      "apiVersion": "2025-04-01-preview",
+      "properties": {
+        "category": "AppInsights",
+        "target": "/subscriptions/1881d0aa-aae7-4809-843e-e27780842e9f/resourceGroups/rg-ai-300/providers/Microsoft.Insights/components/appi-jojpxmd7nhutk",
+        "authType": "ApiKey",
+        "isSharedToAll": true,
+        "credentials": {
+          "key": "[reference('/subscriptions/1881d0aa-aae7-4809-843e-e27780842e9f/resourceGroups/rg-ai-300/providers/Microsoft.Insights/components/appi-jojpxmd7nhutk', '2020-02-02').ConnectionString]"
+        },
+        "metadata": {
+          "ApiType": "Azure",
+          "ResourceId": "/subscriptions/1881d0aa-aae7-4809-843e-e27780842e9f/resourceGroups/rg-ai-300/providers/Microsoft.Insights/components/appi-jojpxmd7nhutk"
+        }
+      }
+    },
+    {
+      "id": "/subscriptions/1881d0aa-aae7-4809-843e-e27780842e9f/resourceGroups/rg-ai-300/providers/Microsoft.CognitiveServices/accounts/ai-account-jojpxmd7nhutk/providers/Microsoft.Authorization/roleAssignments/0db24717-d070-5ad4-ac10-25133afe21ad",
+      "type": "Microsoft.Authorization/roleAssignments",
+      "name": "0db24717-d070-5ad4-ac10-25133afe21ad",
+      "apiVersion": "2022-04-01",
+      "properties": {
+        "principalId": "d015ba7f-0cac-4b8b-8999-2c6337e3f22c",
+        "principalType": "User",
+        "roleDefinitionId": "/subscriptions/1881d0aa-aae7-4809-843e-e27780842e9f/resourceGroups/rg-ai-300/providers/Microsoft.Authorization/roleDefinitions/53ca6127-db72-4b80-b1b0-d745d6d5456d"
+      }
+    },
+    {
+      "id": "/subscriptions/1881d0aa-aae7-4809-843e-e27780842e9f/resourceGroups/rg-ai-300/providers/Microsoft.Authorization/roleAssignments/c75b8a71-758b-501f-8b78-1551700e8602",
+      "type": "Microsoft.Authorization/roleAssignments",
+      "name": "c75b8a71-758b-501f-8b78-1551700e8602",
+      "apiVersion": "2022-04-01",
+      "properties": {
+        "principalId": "d015ba7f-0cac-4b8b-8999-2c6337e3f22c",
+        "principalType": "User",
+        "roleDefinitionId": "/subscriptions/1881d0aa-aae7-4809-843e-e27780842e9f/resourceGroups/rg-ai-300/providers/Microsoft.Authorization/roleDefinitions/64702f94-c441-49e6-a78b-ef80e0188fee"
+      }
+    },
+    {
+      "id": "/subscriptions/1881d0aa-aae7-4809-843e-e27780842e9f/resourceGroups/rg-ai-300/providers/Microsoft.Authorization/roleAssignments/96c9599e-1745-5db4-9704-1debab8540f7",
+      "type": "Microsoft.Authorization/roleAssignments",
+      "name": "96c9599e-1745-5db4-9704-1debab8540f7",
+      "apiVersion": "2022-04-01",
+      "properties": {
+        "principalId": "d015ba7f-0cac-4b8b-8999-2c6337e3f22c",
+        "principalType": "User",
+        "roleDefinitionId": "/subscriptions/1881d0aa-aae7-4809-843e-e27780842e9f/resourceGroups/rg-ai-300/providers/Microsoft.Authorization/roleDefinitions/a97b65f3-24c7-4388-baec-2e87135dc908"
+      }
+    },
+    {
+      "id": "/subscriptions/1881d0aa-aae7-4809-843e-e27780842e9f/resourceGroups/rg-ai-300/providers/Microsoft.CognitiveServices/accounts/ai-account-jojpxmd7nhutk/providers/Microsoft.Authorization/roleAssignments/1cadcf39-4ac4-538e-8752-cb7439e2203c",
+      "type": "Microsoft.Authorization/roleAssignments",
+      "name": "1cadcf39-4ac4-538e-8752-cb7439e2203c",
+      "apiVersion": "2022-04-01",
+      "properties": {
+        "principalId": "[reference('/subscriptions/1881d0aa-aae7-4809-843e-e27780842e9f/resourceGroups/rg-ai-300/providers/Microsoft.CognitiveServices/accounts/ai-account-jojpxmd7nhutk/projects/ai-project-ai-300', '2025-06-01', 'full').identity.principalId]",
+        "principalType": "ServicePrincipal",
+        "roleDefinitionId": "/subscriptions/1881d0aa-aae7-4809-843e-e27780842e9f/resourceGroups/rg-ai-300/providers/Microsoft.Authorization/roleDefinitions/53ca6127-db72-4b80-b1b0-d745d6d5456d"
+      }
+    },
+    {
+      "id": "/subscriptions/1881d0aa-aae7-4809-843e-e27780842e9f/resourceGroups/rg-ai-300/providers/Microsoft.CognitiveServices/accounts/ai-account-jojpxmd7nhutk/deployments/gpt-4.1-mini",
+      "type": "Microsoft.CognitiveServices/accounts/deployments",
+      "name": "ai-account-jojpxmd7nhutk/gpt-4.1-mini",
+      "apiVersion": "2025-06-01",
+      "sku": {
+        "name": "Standard",
+        "capacity": 10
+      },
+      "properties": {
+        "model": {
+          "format": "OpenAI",
+          "name": "gpt-4.1-mini",
+          "version": "2025-04-14"
+        }
+      }
+    },
+    {
+      "id": "/subscriptions/1881d0aa-aae7-4809-843e-e27780842e9f/resourceGroups/rg-ai-300/providers/Microsoft.CognitiveServices/accounts/ai-account-jojpxmd7nhutk/deployments/gpt-4.1",
+      "type": "Microsoft.CognitiveServices/accounts/deployments",
+      "name": "ai-account-jojpxmd7nhutk/gpt-4.1",
+      "apiVersion": "2025-06-01",
+      "sku": {
+        "name": "Standard",
+        "capacity": 10
+      },
+      "properties": {
+        "model": {
+          "format": "OpenAI",
+          "name": "gpt-4.1",
+          "version": "2025-04-14"
+        }
+      }
+    },
+    {
+      "id": "/subscriptions/1881d0aa-aae7-4809-843e-e27780842e9f/resourceGroups/rg-ai-300/providers/Microsoft.ContainerRegistry/registries/crjojpxmd7nhutk",
+      "type": "Microsoft.ContainerRegistry/registries",
+      "name": "crjojpxmd7nhutk",
+      "apiVersion": "2023-06-01-preview",
+      "location": "eastus",
+      "sku": {
+        "name": "Basic"
+      },
+      "tags": {
+        "azd-env-name": "ai-300"
+      },
+      "properties": {
+        "anonymousPullEnabled": false,
+        "adminUserEnabled": false,
+        "encryption": null,
+        "policies": {
+          "azureADAuthenticationAsArmPolicy": {
+            "status": "enabled"
+          },
+          "exportPolicy": null,
+          "quarantinePolicy": {
+            "status": "disabled"
+          },
+          "trustPolicy": {
+            "type": "Notary",
+            "status": "disabled"
+          },
+          "retentionPolicy": null,
+          "softDeletePolicy": {
+            "retentionDays": 7,
+            "status": "disabled"
+          }
+        },
+        "dataEndpointEnabled": false,
+        "publicNetworkAccess": "Enabled",
+        "networkRuleBypassOptions": "AzureServices",
+        "networkRuleSet": null,
+        "zoneRedundancy": null
+      }
+    },
+    {
+      "id": "/subscriptions/1881d0aa-aae7-4809-843e-e27780842e9f/resourceGroups/rg-ai-300/providers/Microsoft.ContainerRegistry/registries/crjojpxmd7nhutk/providers/Microsoft.Authorization/roleAssignments/9cc6fea7-c3a7-569a-bc5e-be42ac2a4125",
+      "type": "Microsoft.Authorization/roleAssignments",
+      "name": "9cc6fea7-c3a7-569a-bc5e-be42ac2a4125",
+      "apiVersion": "2022-04-01",
+      "properties": {
+        "roleDefinitionId": "/subscriptions/1881d0aa-aae7-4809-843e-e27780842e9f/providers/Microsoft.Authorization/roleDefinitions/7f951dda-4ed3-4680-a7ca-43fe172d538d",
+        "principalId": "d015ba7f-0cac-4b8b-8999-2c6337e3f22c",
+        "description": null,
+        "principalType": "User",
+        "condition": null,
+        "conditionVersion": null,
+        "delegatedManagedIdentityResourceId": null
+      }
+    },
+    {
+      "id": "[extensionResourceId('/subscriptions/1881d0aa-aae7-4809-843e-e27780842e9f/resourceGroups/rg-ai-300/providers/Microsoft.ContainerRegistry/registries/crjojpxmd7nhutk', 'Microsoft.Authorization/roleAssignments', guid('/subscriptions/1881d0aa-aae7-4809-843e-e27780842e9f/resourceGroups/rg-ai-300/providers/Microsoft.ContainerRegistry/registries/crjojpxmd7nhutk', reference('/subscriptions/1881d0aa-aae7-4809-843e-e27780842e9f/resourceGroups/rg-ai-300/providers/Microsoft.CognitiveServices/accounts/ai-account-jojpxmd7nhutk/projects/ai-project-ai-300', '2025-04-01-preview', 'full').identity.principalId, '/subscriptions/1881d0aa-aae7-4809-843e-e27780842e9f/providers/Microsoft.Authorization/roleDefinitions/7f951dda-4ed3-4680-a7ca-43fe172d538d'))]",
+      "type": "Microsoft.Authorization/roleAssignments",
+      "name": "[guid('/subscriptions/1881d0aa-aae7-4809-843e-e27780842e9f/resourceGroups/rg-ai-300/providers/Microsoft.ContainerRegistry/registries/crjojpxmd7nhutk', reference('/subscriptions/1881d0aa-aae7-4809-843e-e27780842e9f/resourceGroups/rg-ai-300/providers/Microsoft.CognitiveServices/accounts/ai-account-jojpxmd7nhutk/projects/ai-project-ai-300', '2025-04-01-preview', 'full').identity.principalId, '/subscriptions/1881d0aa-aae7-4809-843e-e27780842e9f/providers/Microsoft.Authorization/roleDefinitions/7f951dda-4ed3-4680-a7ca-43fe172d538d')]",
+      "apiVersion": "2022-04-01",
+      "properties": {
+        "roleDefinitionId": "/subscriptions/1881d0aa-aae7-4809-843e-e27780842e9f/providers/Microsoft.Authorization/roleDefinitions/7f951dda-4ed3-4680-a7ca-43fe172d538d",
+        "principalId": "[reference('/subscriptions/1881d0aa-aae7-4809-843e-e27780842e9f/resourceGroups/rg-ai-300/providers/Microsoft.CognitiveServices/accounts/ai-account-jojpxmd7nhutk/projects/ai-project-ai-300', '2025-04-01-preview', 'full').identity.principalId]",
+        "description": null,
+        "principalType": "ServicePrincipal",
+        "condition": null,
+        "conditionVersion": null,
+        "delegatedManagedIdentityResourceId": null
+      }
+    },
+    {
+      "id": "/subscriptions/1881d0aa-aae7-4809-843e-e27780842e9f/resourceGroups/rg-ai-300/providers/Microsoft.CognitiveServices/accounts/ai-account-jojpxmd7nhutk/projects/ai-project-ai-300/connections/acr-connection",
+      "type": "Microsoft.CognitiveServices/accounts/projects/connections",
+      "name": "ai-account-jojpxmd7nhutk/ai-project-ai-300/acr-connection",
+      "apiVersion": "2025-04-01-preview",
+      "properties": {
+        "category": "ContainerRegistry",
+        "target": "[reference('/subscriptions/1881d0aa-aae7-4809-843e-e27780842e9f/resourceGroups/rg-ai-300/providers/Microsoft.ContainerRegistry/registries/crjojpxmd7nhutk', '2019-05-01').loginServer]",
+        "authType": "ManagedIdentity",
+        "isSharedToAll": true,
+        "credentials": {
+          "clientId": "[reference('/subscriptions/1881d0aa-aae7-4809-843e-e27780842e9f/resourceGroups/rg-ai-300/providers/Microsoft.CognitiveServices/accounts/ai-account-jojpxmd7nhutk/projects/ai-project-ai-300', '2025-04-01-preview', 'full').identity.principalId]",
+          "resourceId": "/subscriptions/1881d0aa-aae7-4809-843e-e27780842e9f/resourceGroups/rg-ai-300/providers/Microsoft.ContainerRegistry/registries/crjojpxmd7nhutk"
+        },
+        "metadata": {
+          "ResourceId": "/subscriptions/1881d0aa-aae7-4809-843e-e27780842e9f/resourceGroups/rg-ai-300/providers/Microsoft.ContainerRegistry/registries/crjojpxmd7nhutk"
+        }
+      }
+    }
+  ],
+  "diagnostics": [],
+  "outputs": {
+    "AZURE_AI_SEARCH_CONNECTION_NAME": "",
+    "AZURE_AI_PROJECT_ENDPOINT": "[reference('/subscriptions/1881d0aa-aae7-4809-843e-e27780842e9f/resourceGroups/rg-ai-300/providers/Microsoft.CognitiveServices/accounts/ai-account-jojpxmd7nhutk/projects/ai-project-ai-300', '2025-06-01').endpoints['AI Foundry API']]",
+    "AZURE_STORAGE_CONNECTION_NAME": "",
+    "BING_GROUNDING_CONNECTION_ID": "",
+    "AZURE_CONTAINER_REGISTRY_ENDPOINT": "[reference('/subscriptions/1881d0aa-aae7-4809-843e-e27780842e9f/resourceGroups/rg-ai-300/providers/Microsoft.ContainerRegistry/registries/crjojpxmd7nhutk', '2019-05-01').loginServer]",
+    "APPLICATIONINSIGHTS_CONNECTION_STRING": "[reference('/subscriptions/1881d0aa-aae7-4809-843e-e27780842e9f/resourceGroups/rg-ai-300/providers/Microsoft.Insights/components/appi-jojpxmd7nhutk', '2020-02-02').ConnectionString]",
+    "AZURE_AI_PROJECT_ID": "/subscriptions/1881d0aa-aae7-4809-843e-e27780842e9f/resourceGroups/rg-ai-300/providers/Microsoft.CognitiveServices/accounts/ai-account-jojpxmd7nhutk/projects/ai-project-ai-300",
+    "AZURE_AI_SEARCH_SERVICE_NAME": "",
+    "AZURE_AI_PROJECT_ACR_CONNECTION_NAME": "acr-connection",
+    "BING_CUSTOM_GROUNDING_CONNECTION_ID": "",
+    "AZURE_STORAGE_ACCOUNT_NAME": "",
+    "BING_GROUNDING_RESOURCE_NAME": "",
+    "AZURE_RESOURCE_GROUP": "rg-ai-300",
+    "AZURE_OPENAI_ENDPOINT": "[reference('/subscriptions/1881d0aa-aae7-4809-843e-e27780842e9f/resourceGroups/rg-ai-300/providers/Microsoft.CognitiveServices/accounts/ai-account-jojpxmd7nhutk', '2025-06-01').endpoints['OpenAI Language Model Instance API']]",
+    "AZURE_AI_ACCOUNT_ID": "/subscriptions/1881d0aa-aae7-4809-843e-e27780842e9f/resourceGroups/rg-ai-300/providers/Microsoft.CognitiveServices/accounts/ai-account-jojpxmd7nhutk",
+    "AZURE_OPENAI_DEPLOYMENT_NAMES": [
+      "gpt-4.1-mini",
+      "gpt-4.1"
+    ],
+    "BING_CUSTOM_GROUNDING_NAME": "",
+    "AZURE_AI_PROJECT_NAME": "ai-project-ai-300",
+    "BING_CUSTOM_GROUNDING_CONNECTION_NAME": "",
+    "AZURE_AI_FOUNDRY_PROJECT_ID": "/subscriptions/1881d0aa-aae7-4809-843e-e27780842e9f/resourceGroups/rg-ai-300/providers/Microsoft.CognitiveServices/accounts/ai-account-jojpxmd7nhutk/projects/ai-project-ai-300",
+    "AZURE_AI_ACCOUNT_NAME": "ai-account-jojpxmd7nhutk",
+    "BING_GROUNDING_CONNECTION_NAME": ""
+  }
+}
